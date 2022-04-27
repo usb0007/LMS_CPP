@@ -1,7 +1,7 @@
-#ifndef LIB_H //defining header file
+#ifndef LIB_H     //defining header file
 #define LIB_H
 
-#include<iostream> //including libraries
+#include<iostream>   //including libraries
 #include<sstream>
 #include<fstream>
 #include <set> 
@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class book //creating book class
+class book    //creating book class
 {	
 	string bid, name, author, publisher;
 	
@@ -28,6 +28,8 @@ class book //creating book class
 				write();
 			}
 			}
+			
+			// write fucntion to write into the book.txt file.
 			void write() 
 			{
 				ofstream out;
@@ -38,15 +40,15 @@ class book //creating book class
 				}
 };
 
-
-class user:public book //creating user class and inheriting book class
+//creating user class and inheriting book class
+class user:public book 
 {
 	protected:
 		string eno,name,phone,email,pass,enroll,password;
 	
 	public:
 		user(){} //default  Constructor
-		user(string eno,string name, string phone, string email,string pass, bool writeToFile) // Parameterized Constructor
+		user(string eno,string name, string phone, string email,string pass, bool writeToFile)   // Parameterized Constructor
 		{
 			this->eno = eno;
 			this->pass = pass;
@@ -64,8 +66,8 @@ class user:public book //creating user class and inheriting book class
 		}
 		
 		
-		
-		void signup() //registration of user
+		//registration of user
+		void signup() 
 		{
 			system("clear");
 			//cout<<"Enter Enrollment :-> ";
@@ -85,7 +87,7 @@ class user:public book //creating user class and inheriting book class
 			ifstream in;
 			in.open("User.txt");
 			
- 			set<int> s1; // declaring Set s1
+ 			set<int> s1;      // declaring Set s1
  			int max_element;
 
  
@@ -96,7 +98,6 @@ class user:public book //creating user class and inheriting book class
 	
 					if(book.length() > 0)
 					{
-						
 						stringstream ss(book);
 						string bid, name, author, publisher;
 						
@@ -136,7 +137,7 @@ class user:public book //creating user class and inheriting book class
 				{
 					 if (!s1.empty())
         				max_element = *(s1.rbegin());
-        				//cout<<"sadsadasdsadasd  "<<max_element;
+        				
         				int id=max_element + 1;
         				
         				eno= to_string(id);

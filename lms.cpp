@@ -1,10 +1,11 @@
-#include <iostream> //including libraries
-#include "lms.h" //including header file
+#include <iostream>     //including libraries
+#include "lms.h"       //including header file
+
 using namespace std;
 
 
-
-int main() //main method
+//main method
+int main() 
 {
 	int choice = -1;
 	
@@ -49,7 +50,7 @@ int main() //main method
 		cout<<"4 - Librarian Login"<<endl;
 		cout<<"0 - Exit"<<endl;
 		
-		cout<<endl<<"Enter your choice :-> ";
+		cout<<endl<<"Enter your choice : -> ";
 		cin>>choice;
 		switch(choice)
 		{
