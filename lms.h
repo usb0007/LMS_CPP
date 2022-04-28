@@ -89,7 +89,6 @@ class user:public book
 			
  			set<int> s1;      // declaring Set s1
  			int max_element;
-
  
 			while(!in.eof())
 			{
@@ -422,7 +421,7 @@ class user:public book
 
 class librarian:public user //creating librarian class and inheriting the user class 
 {
-	string name,pass;
+	string name,pass; // local variables
 	public:
 		librarian(){} // Default Constructor
 
@@ -558,7 +557,6 @@ class librarian:public user //creating librarian class and inheriting the user c
 						stringstream ss(user);
 						string eno, name, phone, email;
 						ss>>eno>>name>>phone>>email;
-			
 						cout<<endl;
 						cout<<"Enrollment No :-> "<<eno<<endl;
 						cout<<"Name :-> "<<name<<endl;
@@ -579,7 +577,6 @@ class librarian:public user //creating librarian class and inheriting the user c
 			system("clear");
 			int flag = 0;
 			string key;
-			
 			cout<<endl;
 			cout<<"Enter Enrollment no :-> ";
 			cin>>key;
@@ -637,7 +634,6 @@ class librarian:public user //creating librarian class and inheriting the user c
 			
 			int flag = 0;
 			string key;
-			
 			cout<<endl;
 			cout<<"Enter Enrollment no :-> ";
 			cin>>key;
@@ -737,8 +733,8 @@ class librarian:public user //creating librarian class and inheriting the user c
 			string bid, name, author, publisher;
 	
 			cout<<endl;
-			cout<<"Enter Book Id :-> ";
-			cin>>bid;
+			//cout<<"Enter Book Id :-> ";
+			//cin>>bid;
 			cout<<"Enter Book Name :-> ";
 			cin>>name;
 			cout<<"Enter Author Name :-> ";
@@ -751,14 +747,37 @@ class librarian:public user //creating librarian class and inheriting the user c
 			key=bid;
 			ifstream in;
 			in.open("Book.txt");
-			while(!in.eof())
-				{
-					string text;
+			set<int> s1; // declaring Set s1
+			int max_element;
+ 			while(!in.eof())
+			{
+				 	string text;
 					getline(in,text);
 	
 					if(text.length() > 0)
 					{
+						
 						stringstream ss(text);
+						string bid, name, author, publisher;
+						
+						ss>>bid>>name>>author>>publisher;
+				
+						int num=stoi(bid);
+						s1.insert(num);
+						   						
+						cout<<endl;
+						
+					}
+			}
+			
+			while(!in.eof())
+				{
+					string book;
+					getline(in,book);
+	
+					if(book.length() > 0)
+					{
+						stringstream ss(book);
 						string bid, name, author, publisher;
 						ss>>bid>>name>>author>>publisher;
 			
@@ -774,13 +793,17 @@ class librarian:public user //creating librarian class and inheriting the user c
 				
 				if(flag == 0)
 				{
+					 if (!s1.empty())
+        				max_element = *(s1.rbegin());
+        				//cout<<"sadsadasdsadasd  "<<max_element;
+        				int id=max_element + 1;
+        				
+        				bid= to_string(id);
+					
 					book book(bid, name, author, publisher, true);
 					cout<<"Book Added Successtully..";
 					
-				}	
-			
-			
-			
+				}		
 		}
 		
 		

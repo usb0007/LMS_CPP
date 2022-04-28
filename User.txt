@@ -1,16 +1,14 @@
 1 durak 9898989999 bvk@cpp.com
 2 durak1 9129024301 durak@gmail.com
-3 1001 1001 1001@gmail.comm 1001
-4 1002 1002 1002 1002
-5 5 5 5 5
-6 666 666 666 666
-7 777 777 777 777
-8 usb usb usb usb
-9 ipl ipl ipl ipl
-10 iop iop iiop iop
-11 opp opp opp opp
-12 ioi ioi ioi ioi
-13 ussb ussb ussb ussb
-14 ussb ussb ussb ussb
-15 ramu 45641655445 ramu@gmail.com ramu
-16 usb usb usb usb
+3 1001 1001 1001@gmail.comm
+4 1002 1002 1002
+5 5 5 5
+6 666 666 666
+7 777 777 777
+8 usb usb usb
+9 ipl ipl ipl
+10 iop iop iiop
+11 opp opp opp
+12 ioi ioi ioi
+15 ramu 45641655445 ramu@gmail.com
+16 usb usb usb
