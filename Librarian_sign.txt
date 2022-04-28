@@ -10,3 +10,6 @@ ipl ipl
 ioi ioi
 uiu uiu
 oii oii
+librarian libr
+hhh hhh
+yush yush

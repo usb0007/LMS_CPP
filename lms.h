@@ -93,28 +93,26 @@ class user:public book
  
 			while(!in.eof())
 			{
-				 	string book;
-					getline(in,book);
+				 	string user;
+					getline(in,user);
 	
-					if(book.length() > 0)
+					if(user.length() > 0)
 					{
-						stringstream ss(book);
-						string bid, name, author, publisher;
 						
-						ss>>bid>>name>>author>>publisher;
+						stringstream ss(user);
+						string eno, name, phone, email,pass;
+						
+						ss>>eno>>name>>phone>>email>>pass;
 				
-						int num=stoi(bid);
+						int num=stoi(eno);
 						s1.insert(num);
 						   						
 						cout<<endl;
 						
 					}
 			}
-				
-
 			while(!in.eof())
 			{
-
 				string user;
 				getline(in,user);
 	
@@ -171,7 +169,7 @@ class user:public book
 			
 			if(in.eof())
 			{
-				cout<<endl<<"!!!  No User present in the record  !!!"<<endl;	
+				cout<<endl<<"!!! Wrong Enrollment Number or Password, Try again later "<<endl;	
 			}
 			else
 			{
@@ -461,7 +459,7 @@ class librarian:public user //creating librarian class and inheriting the user c
 			
 			if(in.eof())
 			{
-				cout<<endl<<"!!!  No Librarian present in the record  !!!"<<endl;	
+				cout<<endl<<"Wrong Username or Password, Try again later "<<endl;	
 			}
 			else
 			{
